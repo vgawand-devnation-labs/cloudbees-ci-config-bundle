@@ -1,6 +1,14 @@
+cloudbees-pipeline-policies:
+  config:
+    policies:
+    - action: "fail"
+      name: "Timeout policy"
+      rules:
+      - entirePipelineTimeoutRule:
+          maxTime: 60
 jenkins:
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v1'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -17,7 +25,7 @@ unclassified:
     durabilityHint: PERFORMANCE_OPTIMIZED
   globallibraries:
     libraries:
-    - defaultVersion: "master"
+    - defaultVersion: "module-2"
       name: "pipeline-library"
       retriever:
         modernSCM:
